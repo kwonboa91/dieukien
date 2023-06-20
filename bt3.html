@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="month" type="number">
+    <button onclick="hienThi()">Tinh so ngay</button>
+    <p id="result">0</p>
+    <script>
+        function hienThi() {
+            let month = document.getElementById("month").value;
+            let soNgay;
+            switch (month) {
+                case "1":
+                case "3":
+                case "5":
+                case "7":
+                case "8":
+                case "10":
+                case "12":
+                    soNgay = "31 ngay";
+                    document.getElementById("result").innerHTML = "thang " + month + " co " + soNgay;
+                    break;
+                case "2":
+                    soNgay = "28 hoac 29 ngay";
+                    document.getElementById("result").innerHTML = "thang " + month + " co " + soNgay;
+                    break;
+                case "4":
+                case "6":
+                case "9":
+                case "11":
+                    soNgay = "30 ngay";
+                    document.getElementById("result").innerHTML = "thang " + month + " co " + soNgay;
+                    break;
+                default:
+                    soNgay = "so thang khong hop le"
+                    document.getElementById("result").innerHTML = "so thang khong hop le";
+                    break;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
