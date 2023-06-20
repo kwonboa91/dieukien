@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Mon Toan</p>
+    <input type="number" name="" id="toan">
+    <p>Mon Van</p>
+    <input type="number" name="" id="van">
+    <p>Mon Anh</p>
+    <input type="number" name="" id="anh">
+    <p>Khu vuc</p>
+
+    <select name="" id="list" >
+        <option value="KV1">KV1</option>
+        <option value="KV2">KV2</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV3">KV3</option>
+    </select>
+    <br>
+    <br>
+
+    <button onclick="hienThi()">tinh diem</button>
+
+    <h1 style="color: red;" id="result">0</h1>
+
+    <script>
+
+        function hienThi() {
+            let t = +document.getElementById("toan").value;
+            let v = +document.getElementById("van").value;
+            let a = +document.getElementById("anh").value;
+            let list = document.getElementById("list").value;
+            let sum;
+            switch (list) {
+                case "KV1":
+                    sum = t + v + a + 0.75;
+                    break;
+                case "KV2":
+                    sum = t + v + a + 0.5;
+                    break;
+                case "KV2-KV":
+                    sum = t + v + a + 0.25;
+                    break;
+                case "KV3":
+                    sum = t + v + a + 0;
+                    break;
+            }
+            document.getElementById("result").innerHTML = "Tong diem DH khoi D cua ban la: " + sum;
+        }
+
+    </script>
+</body>
+
+</html>
