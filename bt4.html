@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let weight = prompt("nhap can nang (kg)");
+        let height = prompt("nhap chieu cao (m)");
+        let bmi = weight / Math.pow(height, 2);
+        if (bmi < 16) {
+            alert("gay do III")
+        } else if (16 <= bmi && bmi < 17) {
+            alert("gay cap do II")
+        } else if (17 <= bmi && bmi < 18.5) {
+            alert("gay cap do I")
+        } else if (18.5 <= bmi && bmi < 25) {
+            alert("binh thuong")
+        } else if (25 <= bmi && bmi < 30) {
+            alert("thua can")
+        } else if (30 <= bmi && bmi < 35) {
+            alert("beo phi cap do I")
+        } else if (35 <= bmi && bmi < 35) {
+            alert("beo phi cap do II")
+        } else if (bmi > 40) {
+            alert("beo phi cap di III")
+        }
+    </script>
+</body>
+
+</html>
