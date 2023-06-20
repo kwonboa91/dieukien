@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td>
+                    <p>Amount</p>
+                </td>
+                <td>
+                    <p>From Currency</p>
+                </td>
+                <td>
+                    <p>To Currency</p>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="number" id="dauvao" style="width: 100px;"></td>
+                <td>
+                    <select name="" id="select1" style="width: 100px;">
+                        <option value="VN">VN</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td>
+                    <select name="" id="select2" style="width: 100px;">
+                        <option value="VN">VN</option>
+                        <option value="USD">USD</option>
+                    </select>
+                </td>
+                <td><button onclick="chuyenDoi()">Convert</button></td>
+            </tr>
+        </table>
+    </form>
+
+
+    <script>
+
+        function chuyenDoi() {
+            let tienVao = document.getElementById("dauvao").value;
+            let select1 = document.getElementById("select1").value;
+            let select2 = document.getElementById("select2").value;
+            if (select1 == select2) {
+                alert(tienVao)
+            }
+            if (select1 == "VN" && select2 == "USD") {
+                tienVao /= 21000;
+                alert(tienVao + " USD");
+            }
+            if (select1 == "USD" && select2 == "VND") {
+                tienVao *= 21000;
+                alert(tienVao + "VND");
+            }
+        }
+    </script>
+</body>
+
+</html>
